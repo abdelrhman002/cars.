@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+    background: #fff;
+}
+.header {
+    position:fixed ;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    width: 100%;
+    height: 50px;
+    padding: 25px 8%;
+    z-index: 100;
+}
+.logo {
+    font-size: 25px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: sidright 1s ease forwards;
+}
+@keyframes sidright {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.navbar a {
+    text-decoration: none;
+    margin: 0 20px;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    opacity: 0;
+    animation: sidetop3 .5s ease forwards;
+    animation-delay:calc(.2s * var(--i)) ;
+                                                            
+}
+@keyframes sidetop3 { 
+    0% {
+        transform: translatey(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0%);
+        opacity: 1;
+    }
+}
+.navbar a:hover,
+.navbar a.active{
+    color: #1743e3;
+}
+.social-media {
+    width: 150px;
+    height: 40px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+
+}
+.social-media a {
+    text-decoration: none;
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent ;
+    transform:rotate(45deg);
+    opacity: 0;
+    animation: sidetop4 .5s ease forwards;
+    animation-delay: calc(.2s * var(--i)) ;
+}
+@keyframes sidetop4 { 
+    0% {
+        transform: translatex(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translatex(0px) rotate(45deg);
+        opacity: 1;
+    }
+}
+.social-media a:hover {
+    border-color: #fff;
+}
+.social-media a i {
+    font-size: 24px;
+    color: #fff;
+    transform:rotate(-45deg);
+}
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 8% ;
+    overflow: hidden;
+}
+.home-content {
+    max-width: 630px;
+}
+.home-content h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: sidetop 1s ease forwards;
+}
+@keyframes sidetop { 
+    0% {
+        transform: translatey(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0%);
+        opacity: 1;
+    }
+}
+.home-content h3 {
+    font-size: 40px;
+    color: #1743e3;
+    opacity: 0;
+    animation: sidetop2 1.2s ease forwards;
+}
+@keyframes sidetop2 { 
+    0% {
+        transform: translatex(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.home-content p {
+    font-size: 16px;
+    margin: 15px 0 30px;
+    opacity: 0;
+    animation: sideleft 1s ease forwards;
+    animation-delay: 1.6s;
+}
+@keyframes sideleft { 
+    0% {
+        transform: translatex(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.btn {
+    padding: 10px 25px;
+    background: #1743e3;
+    border: 2px solid #1743e3;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #Fff;
+    letter-spacing: 1px ;
+    text-decoration: none;
+    font-weight: 600px;
+    transition: 0.5s; 
+    opacity: 0;
+    animation: siderigth2 1s ease forwards;
+    animation-delay: 2s;
+}
+@keyframes siderigth2 { 
+    0% {
+        transform: translatex(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatex(0%);
+        opacity: 1;
+    }
+}
+
+.btn:hover{
+    background: transparent;
+    color: #1743e3;
+}
+.home-img {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+    right: -8%;
+    margin-top: 30px;
+}
+.home-img .rombus {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 25px solid #1743e3;
+    box-shadow: -15px -15px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: zout 1s ease forwards;
+    animation-delay: 1.6s;
+}
+@keyframes zout { 
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.home-img .rombus img {
+    position: absolute;
+    top: 130px;
+    left: -200px;
+    max-width: 690px;
+    transform: rotate(-45deg);
+    opacity: 0;
+    animation: car 1s ease forwards;
+    animation-delay: 2s;
+}
+img::selection {
+    color: transparent;
+}
+@keyframes car { 
+    0% {
+        transform: translate(300px, -300px) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, -0) scale(1) rotate(-45deg);
+        opacity: 1;
+    }
+}
+.home .rombus2 {
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 650px;
+    height: 650px;
+    background: #1743e3;
+   transform: rotate(45deg);
+   z-index: -1;
+} 
